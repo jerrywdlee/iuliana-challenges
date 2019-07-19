@@ -2,7 +2,7 @@
   .dashboard-container
     github-corner(
       size=65,
-      url="https://github.com/jerrywdlee/EnergyDataSimulationChallenge/tree/master/challenge3/webapp/caesaris"
+      url="https://github.com/jerrywdlee/iuliana-challenges"
     )
     h1.dashboard-text Energy Data Simulation Challenges
     //.dashboard-text

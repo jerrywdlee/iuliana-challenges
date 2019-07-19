@@ -11,7 +11,7 @@
           | OOPS!
         .text-404__info
           | Copyright (c) 2019
-          a.link-type(href='https://github.com/jerrywdlee/EnergyDataSimulationChallenge', target='_blank')
+          a.link-type(href='https://github.com/jerrywdlee/iuliana-challenges', target='_blank')
             |  Iuliana Caesaris Augusta
         .text-404__headline
           | {{ message }}

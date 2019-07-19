@@ -1,4 +1,5 @@
 module.exports = {
+  // TODO: Change here for GitHub page
   publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
 
   pwa: {

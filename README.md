@@ -21,7 +21,7 @@ This is a web app for exhibiting **[EnergyDataSimulationChallenge](https://githu
 
 #### Command Cheat Sheet
 ##### Setup Rails Part
-*Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path*
+<!-- *Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path* -->
 
 ```sh
 $ bundle install
@@ -41,7 +41,7 @@ Password: admin2019
 ##### Setup Admin(Vue.js) Part
 Admin part is based on [Vue Element Admin](https://github.com/PanJiaChen/vue-element-admin) and [Vue Typescript Admin Template](https://github.com/Armour/vue-typescript-admin-template), special thanks.
 
-*Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris/vendor/admin` As Root Path*
+*Set `vendor/admin` As Root Path*
 
 ```sh
 $ yarn install
@@ -57,7 +57,7 @@ $ npx vsvg -s ./src/icons/svg -t ./src/icons/components --ext ts --es6
 ```
 
 ##### Tests on Rails Part
-*Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path*
+<!-- *Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path* -->
 
 ```sh
 $ bundle exec rspec
@@ -66,7 +66,7 @@ $ bundle exec rspec
 ```
 
 ##### Tests on Admin(Vue.js) Part
-*Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris/vendor/admin` As Root Path*
+*Set `vendor/admin` As Root Path*
 
 ```sh
 $ yarn test:unit
@@ -76,7 +76,7 @@ $ yarn test:unit
 
 ### Deployment (production)
 #### Deploy Directly
-*Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path*
+<!-- *Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path* -->
 
 - Install Postgres and set `POSTGRES_USERNAME`, `POSTGRES_PASSWORD`
 - Set `SECRET_KEY_BASE` by `bundle exec rake secret`
@@ -93,7 +93,7 @@ $ bundle exec puma -C config/puma.rb
 ```
 
 #### Deploy By Docker
-*Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path*
+<!-- *Set `EnergyDataSimulationChallenge/challenge3/webapp/caesaris` As Root Path* -->
 
 ```sh
 $ echo "POSTGRES_USERNAME=${YOUR_DB_USERNAME}" >> .env

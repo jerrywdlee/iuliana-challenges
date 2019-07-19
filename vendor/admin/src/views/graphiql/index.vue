@@ -46,7 +46,7 @@ export default class Form extends Vue {
   }
 
   private openCheatSheet() {
-    const url = 'https://github.com/jerrywdlee/EnergyDataSimulationChallenge/blob/master/challenge3/webapp/caesaris/documents/graphql_cheat_sheet.md'
+    const url = 'https://github.com/jerrywdlee/iuliana-challenges/blob/master/documents/graphql_cheat_sheet.md'
     const win = window.open(url)
   }
 
