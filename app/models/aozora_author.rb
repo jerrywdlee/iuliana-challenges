@@ -3,7 +3,7 @@ require 'nokogiri'
 
 class AozoraAuthor < ApplicationRecord
   has_many :aozora_book_authors
-  has_many :books, through: :aozora_book_authors
+  has_many :aozora_books, through: :aozora_book_authors
 
   enum copyright: {
     'あり' => true,

@@ -1,3 +1,6 @@
+# 下記のPJを参考し作成しています
+# https://github.com/aozorahack/db_importer
+
 require'csv'
 require'open-uri'
 require'tempfile'
