@@ -34,6 +34,8 @@ gem "devise-jwt", "~> 0.5.9"
 gem "easy_settings"
 gem "rails-settings-cached", "~> 2.0"
 
+gem 'rubyzip'
+
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

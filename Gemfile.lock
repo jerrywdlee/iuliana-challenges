@@ -247,6 +247,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
+    rubyzip (2.0.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -346,6 +347,7 @@ DEPENDENCIES
   rspec
   rspec-rails
   rubocop (~> 0.72.0)
+  rubyzip
   sass-rails (~> 5.0)
   simplecov
   slim-rails
