@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book_uid: 1
+  title: MyString
+  title_yomi: MyString
+  title_sort: MyString
+  subtitle: MyString
+  subtitle_yomi: MyString
+  original_title: MyString
+  first_appearance: MyString
+  ndc_code: MyString
+  font_kana_type: MyString
+  copyright: false
+  release_date: 2021-05-05
+  last_modified: 2021-05-05
+  card_url: MyString
+  text_url: MyString
+  html_url: MyString
+  text_encoding: MyString
+  html_encoding: MyString
+
+two:
+  book_uid: 1
+  title: MyString
+  title_yomi: MyString
+  title_sort: MyString
+  subtitle: MyString
+  subtitle_yomi: MyString
+  original_title: MyString
+  first_appearance: MyString
+  ndc_code: MyString
+  font_kana_type: MyString
+  copyright: false
+  release_date: 2021-05-05
+  last_modified: 2021-05-05
+  card_url: MyString
+  text_url: MyString
+  html_url: MyString
+  text_encoding: MyString
+  html_encoding: MyString

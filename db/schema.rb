@@ -10,10 +10,79 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_065530) do
+ActiveRecord::Schema.define(version: 2021_05_05_160125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aozora_authors", force: :cascade do |t|
+    t.string "author_uid"
+    t.string "last_name"
+    t.string "first_name"
+    t.string "full_name"
+    t.string "last_name_yomi"
+    t.string "first_name_yomi"
+    t.string "last_name_sort"
+    t.string "first_name_sort"
+    t.string "last_name_roman"
+    t.string "first_name_roman"
+    t.date "date_of_birth"
+    t.date "date_of_death"
+    t.boolean "copyright"
+    t.text "outline"
+    t.text "wiki_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_uid"], name: "index_aozora_authors_on_author_uid"
+    t.index ["first_name"], name: "index_aozora_authors_on_first_name"
+    t.index ["first_name_roman"], name: "index_aozora_authors_on_first_name_roman"
+    t.index ["first_name_sort"], name: "index_aozora_authors_on_first_name_sort"
+    t.index ["first_name_yomi"], name: "index_aozora_authors_on_first_name_yomi"
+    t.index ["full_name"], name: "index_aozora_authors_on_full_name"
+    t.index ["last_name"], name: "index_aozora_authors_on_last_name"
+    t.index ["last_name_roman"], name: "index_aozora_authors_on_last_name_roman"
+    t.index ["last_name_sort"], name: "index_aozora_authors_on_last_name_sort"
+    t.index ["last_name_yomi"], name: "index_aozora_authors_on_last_name_yomi"
+  end
+
+  create_table "aozora_book_authors", force: :cascade do |t|
+    t.integer "aozora_author_id"
+    t.integer "aozora_book_id"
+    t.string "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aozora_author_id"], name: "index_aozora_book_authors_on_aozora_author_id"
+    t.index ["aozora_book_id"], name: "index_aozora_book_authors_on_aozora_book_id"
+    t.index ["role"], name: "index_aozora_book_authors_on_role"
+  end
+
+  create_table "aozora_books", force: :cascade do |t|
+    t.string "book_uid"
+    t.string "title"
+    t.string "title_yomi"
+    t.string "title_sort"
+    t.string "subtitle"
+    t.string "subtitle_yomi"
+    t.string "original_title"
+    t.string "font_kana_type"
+    t.boolean "copyright"
+    t.date "release_date"
+    t.date "last_modified"
+    t.string "card_url"
+    t.string "text_url"
+    t.string "html_url"
+    t.string "text_encoding"
+    t.string "html_encoding"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_uid"], name: "index_aozora_books_on_book_uid"
+    t.index ["original_title"], name: "index_aozora_books_on_original_title"
+    t.index ["subtitle"], name: "index_aozora_books_on_subtitle"
+    t.index ["subtitle_yomi"], name: "index_aozora_books_on_subtitle_yomi"
+    t.index ["title"], name: "index_aozora_books_on_title"
+    t.index ["title_sort"], name: "index_aozora_books_on_title_sort"
+    t.index ["title_yomi"], name: "index_aozora_books_on_title_yomi"
+  end
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
