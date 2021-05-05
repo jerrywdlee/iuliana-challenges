@@ -15,6 +15,13 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :aozora, only: [] do
+    collection do
+      get :authors
+      get :books
+    end
+  end
+
   # GraphiQL
   # See `config/initializers/graphiql.rb`
   constraints GraphiQLAuthenticate.new do
