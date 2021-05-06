@@ -8,8 +8,9 @@ json.authors do
 
     json.books do
       json.array! author.aozora_book_authors do |book_author|
-        json.author_uid book_author.aozora_book.book_uid
+        json.book_uid book_author.aozora_book.book_uid
         json.name book_author.aozora_book.title
+        json.card_url book_author.aozora_book.card_url
         json.role book_author.role
       end
     end

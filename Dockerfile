@@ -36,6 +36,7 @@ ENV SHOW_DEFAULT_USER ${SHOW_DEFAULT_USER}
 ADD Gemfile      $HOME/Gemfile
 ADD Gemfile.lock $HOME/Gemfile.lock
 RUN bundle install -j4
+RUN bundle update
 
 ADD . $HOME
 
@@ -43,5 +44,7 @@ RUN cd /usr/src/app/vendor/admin && yarn install
 RUN bundle exec rake assets:precompile
 
 RUN rm -rf /usr/src/app/vendor/admin
+
+RUN echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
