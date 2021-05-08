@@ -8,7 +8,7 @@ json.books do
         author = book_author.aozora_author
         json.extract! author, :id, :author_uid, :full_name
         json.role book_author.role
-        json.wiki_url author.wiki_url
+        json.extract! author, :aozora_url, :wiki_url
         json.show_author_url aozora_show_author_url(author.id, format: :json)
       end
     end

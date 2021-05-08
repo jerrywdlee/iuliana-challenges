@@ -4,7 +4,7 @@ json.authors do
       :full_name, :last_name, :first_name,
       :last_name_yomi, :first_name_yomi,
       :last_name_roman, :first_name_roman,
-      :date_of_birth, :date_of_death, :outline, :wiki_url
+      :date_of_birth, :date_of_death, :outline, :aozora_url, :wiki_url
     json.show_author_url aozora_show_author_url(author.id, format: :json)
     json.books do
       json.array! author.aozora_book_authors do |book_author|

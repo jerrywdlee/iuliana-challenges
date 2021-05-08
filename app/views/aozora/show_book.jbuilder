@@ -9,8 +9,7 @@ json.authors do
     json.role book_author.role
     json.extract! author, :id, :author_uid, :full_name, :last_name, :first_name,
       :last_name_yomi, :first_name_yomi, :last_name_roman, :first_name_roman,
-      :date_of_birth, :date_of_death, :outline
-    json.wiki_url author.wiki_url
+      :date_of_birth, :date_of_death, :outline, :aozora_url, :wiki_url
     json.show_author_url aozora_show_author_url(author.id, format: :json)
   end
 end

@@ -10,6 +10,10 @@ class AozoraAuthor < ApplicationRecord
     'なし' => false,
   }
 
+  def aozora_url
+    "https://www.aozora.gr.jp/index_pages/person#{author_uid.to_i}.html"
+  end
+
   def set_full_name
     reg = /[ァ-ヴー]+/
     self.full_name = if last_name =~ reg && first_name =~ reg
@@ -20,10 +24,8 @@ class AozoraAuthor < ApplicationRecord
   end
 
   def set_wiki_data
-    url = "https://www.aozora.gr.jp/index_pages/person#{author_uid.to_i}.html"
-
     charset = 'utf-8'
-    html = open(url) { |f| f.read }
+    html = open(aozora_url) { |f| f.read }
 
     doc = Nokogiri::HTML.parse(html, nil, charset)
 

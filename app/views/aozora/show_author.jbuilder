@@ -4,7 +4,7 @@ json.extract! @author, :id, :author_uid,
   :last_name_roman, :first_name_roman,
   :last_name_sort, :first_name_sort,
   :copyright, :date_of_birth, :date_of_death,
-  :outline, :wiki_url, :created_at, :updated_at
+  :outline, :aozora_url, :wiki_url, :created_at, :updated_at
 
 json.show_author_url aozora_show_author_url(@author.id, format: :json)
 json.books do
