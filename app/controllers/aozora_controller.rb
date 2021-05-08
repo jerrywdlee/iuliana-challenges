@@ -13,4 +13,12 @@ class AozoraController < ApplicationController
       .order(last_name_sort: :asc, first_name_sort: :asc)
       .page(params[:page]).per(20)
   end
+
+  def show_author
+    @author = AozoraAuthor.find(params[:aozora_id])
+  end
+
+  def show_book
+    @book = AozoraBook.find(params[:aozora_id])
+  end
 end

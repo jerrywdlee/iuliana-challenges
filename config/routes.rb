@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   end
 
   resources :aozora, only: [] do
+    get :show_author
+    get :show_book
     collection do
       get :authors
       get :books
