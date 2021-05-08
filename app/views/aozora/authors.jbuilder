@@ -5,13 +5,13 @@ json.authors do
       :last_name_yomi, :first_name_yomi,
       :last_name_roman, :first_name_roman,
       :date_of_birth, :date_of_death, :outline, :wiki_url
-
+    json.show_author_url aozora_show_author_url(author.id, format: :json)
     json.books do
       json.array! author.aozora_book_authors do |book_author|
-        json.book_uid book_author.aozora_book.book_uid
-        json.name book_author.aozora_book.title
-        json.card_url book_author.aozora_book.card_url
+        book = book_author.aozora_book
+        json.extract! book, :id, :book_uid, :title, :card_url
         json.role book_author.role
+        json.show_book_url aozora_show_book_url(book.id, format: :json)
       end
     end
   end
