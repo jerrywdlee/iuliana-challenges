@@ -1,4 +1,6 @@
 class AozoraController < ApplicationController
+  before_action :authenticate_user!
+
   def books
     query = params[:q] || {}
     if params[:book_title]
