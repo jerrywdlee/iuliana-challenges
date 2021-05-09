@@ -50,7 +50,7 @@ const aozoraCards = [
     title: 'Search Books',
     text: 'Aozora Bunko WEB-API Server',
     target: '/aozora/books',
-    imgUrl: 'https://picsum.photos/id/909/400/300',
+    imgUrl: 'https://picsum.photos/id/914/400/300',
   },
   {
     title: 'Search Authors',
