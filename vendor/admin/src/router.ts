@@ -51,8 +51,8 @@ export default new Router({
       path: '/challenges',
       component: Layout,
       redirect: '/challenges/challenge-3', // TODO: change to `challenge-1`
-      name: 'Challenges',
-      meta: { title: 'Challenges', icon: 'tree' },
+      name: 'Energy Challenges',
+      meta: { title: 'Energy Chal.', icon: 'tree' },
       children: [
         {
           path: 'challenge-1',
@@ -78,6 +78,27 @@ export default new Router({
           name: 'Challenge 4',
           component: () => import(/* webpackChunkName: "challenge-4" */ '@/views/challenges/challenge-4/index.vue'),
           meta: { title: 'Challenge 4', icon: 'example', hidden: true },
+        },
+      ],
+    },
+    {
+      path: '/aozora',
+      component: Layout,
+      redirect: '/aozora/books',
+      name: 'Aozora Bunko',
+      meta: { title: 'Aozora Bunko', icon: 'table' },
+      children: [
+        {
+          path: 'books',
+          name: 'Books',
+          component: () => import(/* webpackChunkName: "aozora-books" */ '@/views/aozora/books/index.vue'),
+          meta: { title: 'Books', icon: 'form' },
+        },
+        {
+          path: 'authors',
+          name: 'Authors',
+          component: () => import(/* webpackChunkName: "aozora-authors" */ '@/views/aozora/authors/index.vue'),
+          meta: { title: 'Authors', icon: 'form' },
         },
       ],
     },

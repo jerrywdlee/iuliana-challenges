@@ -8,6 +8,9 @@
     //.dashboard-text
       span(v-for="role in roles", :key="role") {{ role }}
     card-group(:card-infos="cardInfos")
+
+    h1.dashboard-text Aozora Bunko Api
+    card-group(:card-infos="aozoraCards")
 </template>
 
 <script lang="ts">
@@ -42,6 +45,21 @@ const cardInfos = [
   },
 ]
 
+const aozoraCards = [
+  {
+    title: 'Search Books',
+    text: 'Aozora Bunko WEB-API Server',
+    target: '/aozora/books',
+    imgUrl: 'https://picsum.photos/id/909/400/300',
+  },
+  {
+    title: 'Search Authors',
+    text: 'Aozora Bunko WEB-API Server',
+    target: '/aozora/authors',
+    imgUrl: 'https://picsum.photos/id/866/400/300',
+  },
+]
+
 @Component({
   components: { CardGroup, GithubCorner },
 })
@@ -56,6 +74,10 @@ export default class Dashboard extends Vue {
 
   get cardInfos() {
     return cardInfos
+  }
+
+  get aozoraCards() {
+    return aozoraCards
   }
 }
 </script>
