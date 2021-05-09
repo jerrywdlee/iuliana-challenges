@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.6.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 5.2.2"
+gem "rails", "~> 5.2.5"
 # Use postgresql as the database for Active Record
 gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
@@ -33,6 +33,8 @@ gem "devise-jwt", "~> 0.5.9"
 
 gem "easy_settings"
 gem "rails-settings-cached", "~> 2.0"
+
+gem 'rubyzip'
 
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"

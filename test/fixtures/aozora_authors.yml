@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author_uid: 1
+  last_name: MyString
+  first_name: MyString
+  last_name_yomi: MyString
+  first_name_yomi: MyString
+  last_name_sort: MyString
+  last_name_roman: MyString
+  first_name_roman: MyString
+  date_of_birth: 2021-05-05
+  date_of_death: 2021-05-05
+  copyright: false
+
+two:
+  author_uid: 1
+  last_name: MyString
+  first_name: MyString
+  last_name_yomi: MyString
+  first_name_yomi: MyString
+  last_name_sort: MyString
+  last_name_roman: MyString
+  first_name_roman: MyString
+  date_of_birth: 2021-05-05
+  date_of_death: 2021-05-05
+  copyright: false

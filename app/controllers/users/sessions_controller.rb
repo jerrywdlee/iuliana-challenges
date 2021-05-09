@@ -27,6 +27,8 @@ class Users::SessionsController < Devise::SessionsController
     super
   end
 
+  protected
+
   def xhr_success
     render json: { result: true, code: 20000 }
   end
